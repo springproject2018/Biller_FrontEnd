@@ -1,0 +1,31 @@
+ .logo-text {font-size: 19px;
+    margin-top: 0px;
+  }
+  
+  body .silk-user-thumb img {
+    width: 138px !important;
+    margin-right: 27px !important;
+    height: 138px;
+}
+
+body .user-info-w{
+    padding-bottom: 0 !important;
+}
+
+body [dir="rtl"] md-sidenav .sidebar-panel .sub-menu a:before{
+        position: initial;
+	margin-left: 15px;
+}
+
+div[dir="rtl"].customizer-in  .silk-customizer{
+    left: 0px;
+        transition: left 0.4s cubic-bezier(0.05, 0.74, 0.2, 0.99) 0s;
+}
+div[dir="rtl"]  .silk-customizer .customizer-toggle{
+      left: 301px;
+}
+
+div[dir="rtl"] .silk-customizer {
+    left: -301px;
+     transition: left 0.4s cubic-bezier(0.05, 0.74, 0.2, 0.99) 0s;
+}

@@ -1,0 +1,126 @@
+<div class="row">
+    <div class="col-lg-3 col-xs-6 res-md-6">
+        <!-- small box -->
+        <div class="box-sm bg-primary">
+            <div class="inner">
+                <h3>150</h3>
+                <p> الفواتير المرفوعة</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-shopping-bag"></i>
+            </div>
+            <a href="#" class="box-sm-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-xs-6 res-md-6">
+        <!-- small box -->
+        <div class="box-sm bg-success">
+            <div class="inner">
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <p>الفواتير المدفوعة</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bar-chart"></i>
+            </div>
+            <a href="#" class="box-sm-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-xs-6 res-md-6">
+        <!-- small box -->
+        <div class="box-sm bg-warning">
+            <div class="inner">
+                <h3>44</h3>
+                <p>الفواتير الغير مدفوعة</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-user-plus"></i>
+            </div>
+            <a href="#" class="box-sm-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-xs-6 res-md-6">
+        <!-- small box -->
+        <div class="box-sm bg-danger">
+            <div class="inner">
+                <h3>65</h3>
+                <p>الفواتيرالمدفوعة جزئيا </p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-pie-chart"></i>
+            </div>
+            <a href="#" class="box-sm-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>
+
+<div class="row">
+    <div class="col-lg-6 mb-4" widget>
+        <div class="silk-card border-success">
+            <div class="silk-card-title">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4><i class="fa fa-bar-chart fa-lg mx-1"></i>Bar Chart</h4>
+                    </div>
+                    <div class="card-controls">
+                        <a class="transition" data-widgster="expand" href="#"><i class="fa fa-chevron-down"></i></a>
+                        <a class="transition" data-widgster="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+                        <a class="transition" data-widgster="close" href="#"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="silk-card-content h-300px widget-body">
+                <ngx-charts-bar-vertical [scheme]="colorScheme" [results]="dashboardbar" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+                </ngx-charts-bar-vertical>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mb-4" widget>
+        <div class="silk-card border-success">
+            <div class="silk-card-title">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4 class="text-inverse"><i class="fa fa-inbox fa-lg mx-1"></i> Simple Pie Chart</h4>
+                    </div>
+                    <div class="card-controls">
+                        <a class="transition" data-widgster="expand" href="#"><i class="fa fa-chevron-down"></i></a>
+                        <a class="transition" data-widgster="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+                        <a class="transition" data-widgster="close" href="#"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="silk-card-content h-300px widget-body">
+                <ngx-charts-pie-chart [scheme]="colorScheme" [results]="single" [legend]="false" [explodeSlices]="false" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient" (select)="onSelect($event)">
+                </ngx-charts-pie-chart>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 mb-4" widget>
+        <div class="silk-card border-danger">
+            <div class="silk-card-title">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4><i class="fa fa-database fa mx-1"></i>Analysis Report</h4>
+                    </div>
+                    <div class="card-controls">
+                        <a class="transition" data-widgster="expand" href="#"><i class="fa fa-chevron-down"></i></a>
+                        <a class="transition" data-widgster="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+                        <a class="transition" data-widgster="close" href="#"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="silk-card-content h-300px widget-body">
+                <ngx-charts-bar-horizontal-2d [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+                </ngx-charts-bar-horizontal-2d>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+

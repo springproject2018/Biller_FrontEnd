@@ -1,0 +1,207 @@
+
+<div class="silk-card border-success" widget>
+    <div class="silk-card-title d-flex justify-content-between">
+        <h4>ملف الفواتير</h4>
+    </div>
+    <div class="silk-card-content widget-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="silk-card material">
+                    <div class="silk-card-content">
+                        <div class="profile-detail text-center">
+                            <img class="mb-3 img-circle" src="assets/img/Amazon-630x417.jpg" width="140" height="140">
+                            <h5 class="text-primary">أمازون</h5>
+                            <small>بيع عن طريق الانترنت</small>
+                            <span class="d-block">أسست :1999</span>
+                            <span class="d-block mb-3"></span>
+                            <div class="">                              
+                                <!-- END STAT -->
+                                <div>
+                                    <h5>معلومات المستخدم</h5>
+                                    <p> </p>
+                                    <div>
+                                        <i class="fa fa-globe"></i>
+                                        <a href="http://loremmail@ipsum.com">www.amazon.com</a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <i class="fa fa-facebook"></i>
+                                        <a href="http://www.facebook.com/keenthemes/">amazon</a>
+                                    </div>
+                                    <div class="btn-group btn-group-circle mb-3">
+                                        <button type="button" class="btn waves-effect waves-light gradient-45deg-green-teal gradient-shadow">تعديل</button>
+                                        <button type="button" class="btn waves-effect waves-light gradient-45deg-purple-deep-orange gradient-shadow">حذف </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 mb-4">
+                <div class="silk-card material">
+                    <div class="silk-card-title">
+                        <h5>النشاطات</h5>
+                    </div>
+                    <div class="silk-card-content">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="thead-default">
+                                    <tr class="uppercase">
+                                        <th> المكونات </th>
+                                        <th> صورة </th>
+                                        <th>تعديل</th>
+                                        <th> مشاهدة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            الفواتير
+                                        </td>
+                                        <td>
+                                            <img src="assets/img/billing.jpg" width="80" height="80">
+                                        </td>
+                                        <td> <button type="button" class="btn waves-effect waves-light gradient-45deg-green-teal gradient-shadow"><a routerLink="/biller">تعديل</a></button> </td>
+                                        <td><button type="button" class="btn waves-effect waves-light gradient-45deg-amber-amber gradient-shadow" (click)="showDialog2 = !showDialog2">مشاهدة</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           بنك التسوية
+                                        </td>
+                                        <td>
+                                            <img src="assets/img/banks.jpg" width="70" height="70">
+                                        </td>
+                                        <td> <button type="button" class="btn waves-effect waves-light gradient-45deg-green-teal gradient-shadow"><a routerLink="/bank">تعديل </a></button> </td>
+                                        <td><button type="button" class="btn waves-effect waves-light gradient-45deg-amber-amber gradient-shadow" (click)="showDialog = !showDialog" >مشاهدة</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-dialog [(visible)]="showDialog">
+   <div class="modal-dialog">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+		<div class="modal-header">
+		    <button type="button" class="close" aria-label="Close" (click)="showDialog = !showDialog"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title">مشاهدة</h4>
+		</div>
+		<div class="modal-body">
+         <div class="silk-card-content widget-body">
+                <table class="table">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>الإسم التجاري للمنشأه</th>
+                            <th>رقم السجل التجاري</th>
+                            <th>رأس مال الشركة </th>
+                            <th>بنك التسوية (آيبان)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amazon</td>
+                            <td>1236584</td>
+                            <td>10000</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+		<div class="modal-footer">
+	           <button (click)="showDialog = !showDialog" class="btn">Close</button>
+		</div>
+	    </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+   </div>
+</app-dialog>
+<app-dialog [(visibles)]="showDialog2">
+   <div class="modal-dialog">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+		<div class="modal-header">
+		    <button type="button" class="close" aria-label="Close" (click)="showDialog2 = !showDialog2"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title">مشاهدة</h4>
+		</div>
+		<div class="modal-body" body1>
+         <div class="silk-card-content widget-body">
+                <table class="table">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>الإسم التجاري للمنشأه</th>
+                            <th>رقم السجل التجاري</th>
+                            <th>رأس مال الشركة </th>
+                            <th>بنك التسوية (آيبان)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amazon</td>
+                            <td>1236584</td>
+                            <td>10000</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+		<div class="modal-footer">
+	           <button (click)="showDialog2 = !showDialog2" class="btn">Close</button>
+		</div>
+	    </div>
+	</div>
+   </div>
+</app-dialog>
+
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+<div id="bootstrapModel" class="modal" role="dialog"  [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+		<div class="modal-header">
+		    <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title">مشاهدة</h4>
+		</div>
+		<div class="modal-body" body2>
+         <div class="silk-card-content widget-body">
+                <table class="table">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>الرقم الضريبي للمنشأة</th>
+                            <th>صندوق البريد</th>
+                            <th>الإسم التجاري للمنشأه </th>
+                            <th>الرمز البريدي</th>
+                            <th>رقم السجل التجاري</th>
+                            <th>رأس مال الشركة</th>
+                            <th>النشــــاط</th>
+                            <th>حجم المنشأة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>576</td>
+                            <td>sanabel</td>
+                            <td>795764</td>
+                            <td>68963</td>
+                            <td>100000</td>
+                            <td>billing</td>
+                            <td>big</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</div>
+		<div class="modal-footer">
+		    <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+		</div>
+	    </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+    </div>
+
+
