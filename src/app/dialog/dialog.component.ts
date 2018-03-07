@@ -23,7 +23,7 @@ export class DialogComponent implements OnInit {
   @Input() visible: boolean;
   @Input() visibles: boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @Output() visibleChange2: EventEmitter2<boolean> = new EventEmitter<boolean>();
+  // @Output() visibleChange2: EventEmitter2<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -35,6 +35,6 @@ export class DialogComponent implements OnInit {
   }
   close2() {
     this.visibles = false;
-    this.visibleChange2.emit(this.visibles);
+    this.visibleChange.emit(this.visibles);
   }
 }

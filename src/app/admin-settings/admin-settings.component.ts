@@ -12,7 +12,7 @@ export class AdminSettingsComponent implements OnInit {
 
 }
   	ngOnInit() {
-    	});
+    	};
 }
 
 
