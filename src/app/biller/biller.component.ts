@@ -82,7 +82,7 @@ export class BillerComponent implements OnInit {
         console.log("from  submit1", posts[item].partyType);
       }
     })
-    //
+    //////
     var link = 'http://localhost:8090/Biller/partyGroup/createPartyGroup';
     var body = JSON.stringify(this.form.value);
     
